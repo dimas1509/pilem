@@ -19,8 +19,6 @@ class _HomeScreenState extends State<HomeScreen> {
   List<Movie> _trendingMovies = [];
   List<Movie> _popularMovies = [];
   
-
-
   @override
   void initState(){
     // TODO: implement initstate
@@ -96,7 +94,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       const SizedBox(height: 5),
                       Text(
                         movie.title.length > 14 
-                        ? '${Movie.title.subString(0, 10)}...' 
+                        ? '${movie.title.substring(0, 10)}...' 
                         : movie.title,
                         style: const TextStyle(fontWeight: FontWeight.bold),
                         )
